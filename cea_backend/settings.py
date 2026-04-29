@@ -129,6 +129,9 @@ STATICFILES_DIRS = [
 # Use a more forgiving storage for the first deployment
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
+# Serve dist at root for Vite compatibility
+WHITENOISE_ROOT = BASE_DIR / 'dist'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
