@@ -5,8 +5,10 @@ set -o errexit
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Install Node dependencies and build frontend
+# Install Node dependencies
 npm install
+
+# Force a clean build of the frontend
 npm run build
 
 # Apply any outstanding database migrations
