@@ -62,7 +62,7 @@ ROOT_URLCONF = 'cea_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'dist', BASE_DIR],
+        'DIRS': [BASE_DIR / 'dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
