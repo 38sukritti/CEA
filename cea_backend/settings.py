@@ -126,8 +126,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "dist",
 ]
 
-# Enable WhiteNoise compression and caching
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Use a more forgiving storage for the first deployment
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
