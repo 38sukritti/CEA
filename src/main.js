@@ -89,21 +89,24 @@ window.addEventListener('load', () => {
       }
     });
 
-    tl.to(preloaderLogo, { opacity: 1, y: -20, duration: 1, ease: "power3.out", delay: 0.5 })
-      .to(preloaderLine, { width: 100, duration: 0.8, ease: "power2.inOut" }, "-=0.5")
+    // Ensure logo is visible immediately for live site
+    gsap.set(preloaderLogo, { opacity: 1, y: 0 });
+    
+    tl.to(preloaderLine, { width: 100, duration: 0.8, ease: "power2.inOut" })
       .to(preloaderContent, { opacity: 0, y: -40, duration: 0.8, ease: "power3.in", delay: 0.5 })
       .to(bgTop, { yPercent: -100, duration: 1.2, ease: "expo.inOut" }, "-=0.3")
       .to(bgBottom, { yPercent: 100, duration: 1.2, ease: "expo.inOut" }, "<");
     
-    // Safety timeout: Force reveal after 2s regardless of asset loading
+    // Safety timeout: Force reveal after 1.5s
     setTimeout(() => {
        if (preloader.style.display !== 'none') {
-          gsap.to(preloader, { opacity: 0, duration: 1, onComplete: () => { 
-            preloader.style.display = 'none'; 
-            initPageAnimations(); 
-          }});
+          preloader.style.opacity = '0';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+            initPageAnimations();
+          }, 500);
        }
-    }, 2000);
+    }, 1500);
   } else {
     initPageAnimations();
   }
