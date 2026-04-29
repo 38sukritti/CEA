@@ -89,24 +89,17 @@ window.addEventListener('load', () => {
       }
     });
 
-    // Ensure logo is visible immediately for live site
-    gsap.set(preloaderLogo, { opacity: 1, y: 0 });
-    
-    tl.to(preloaderLine, { width: 100, duration: 0.8, ease: "power2.inOut" })
-      .to(preloaderContent, { opacity: 0, y: -40, duration: 0.8, ease: "power3.in", delay: 0.5 })
-      .to(bgTop, { yPercent: -100, duration: 1.2, ease: "expo.inOut" }, "-=0.3")
-      .to(bgBottom, { yPercent: 100, duration: 1.2, ease: "expo.inOut" }, "<");
-    
-    // Safety timeout: Force reveal after 1.5s
+    // EMERGENCY KILL-SWITCH: Force preloader to disappear immediately
+    preloader.style.opacity = '0';
     setTimeout(() => {
-       if (preloader.style.display !== 'none') {
-          preloader.style.opacity = '0';
-          setTimeout(() => {
-            preloader.style.display = 'none';
-            initPageAnimations();
-          }, 500);
-       }
-    }, 1500);
+        preloader.style.display = 'none';
+        initPageAnimations();
+    }, 100);
+
+    tl.to(preloaderLine, { width: 100, duration: 0.5, ease: "power2.inOut" })
+      .to(preloaderContent, { opacity: 0, duration: 0.5 })
+      .to(bgTop, { yPercent: -100, duration: 0.8 }, "-=0.1")
+      .to(bgBottom, { yPercent: 100, duration: 0.8 }, "<");
   } else {
     initPageAnimations();
   }
