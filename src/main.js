@@ -89,17 +89,13 @@ window.addEventListener('load', () => {
       }
     });
 
-    // EMERGENCY KILL-SWITCH: Force preloader to disappear immediately
-    preloader.style.opacity = '0';
-    setTimeout(() => {
-        preloader.style.display = 'none';
-        initPageAnimations();
-    }, 100);
+    // Full cinematic sequence: logo in → line grows → exit
+    tl.to(preloaderLogo, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
+      .to(preloaderLine, { width: 120, duration: 0.8, ease: "power2.inOut" }, "-=0.3")
+      .to(preloaderContent, { opacity: 0, duration: 0.5, delay: 0.3 })
+      .to(bgTop, { yPercent: -100, duration: 0.9, ease: "power3.inOut" }, "-=0.1")
+      .to(bgBottom, { yPercent: 100, duration: 0.9, ease: "power3.inOut" }, "<");
 
-    tl.to(preloaderLine, { width: 100, duration: 0.5, ease: "power2.inOut" })
-      .to(preloaderContent, { opacity: 0, duration: 0.5 })
-      .to(bgTop, { yPercent: -100, duration: 0.8 }, "-=0.1")
-      .to(bgBottom, { yPercent: 100, duration: 0.8 }, "<");
   } else {
     initPageAnimations();
   }
