@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Cea.</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dark-mode">
+
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo font-serif">Cea.</div>
+      <div class="preloader-line"></div>
+    </div>
+    <div class="preloader-bg-top"></div>
+    <div class="preloader-bg-bottom"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo font-serif">Cea.</div>
+      
+      <nav class="nav-links text-sans">
+        <a href="index.html">Home</a>
+        <a href="products.html">Collection</a>
+        <a href="story.html">Our Story</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="flex items-center" style="gap: 1.5rem;">
+           <div style="display:flex; gap:1rem; opacity: 0.8;" class="desktop-only">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="cart-trigger" stroke="currentColor" stroke-width="1.5" style="cursor:pointer;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+           </div>
+           <a href="products.html" class="btn btn-outline desktop-only" style="border-radius: 2rem; padding: 0.6rem 1.8rem; text-transform:none; letter-spacing:0; font-size:0.85rem; border-color:rgba(255,255,255,0.4); font-family:var(--font-sans);">Shop Now &rsaquo;</a>
+           
+           <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Collection</a>
+    <a href="story.html">Our Story</a>
+    <a href="sustainability.html">Sustainability</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main style="background-color: #1A1C14; color: #EFECE1;">
+    <!-- SECTION: Contact -->
+    <section style="padding: 15rem 0 10rem 0;" class="md-p-0">
+       <div class="container flex justify-between md-flex-col" style="gap: 6rem; align-items: flex-start;">
+          
+          <!-- Left Info -->
+          <div class="reveal-up" style="max-width: 400px;">
+             <h1 class="font-serif" style="font-size: 4rem; line-height: 1.1; margin-bottom: 2rem;">Get in Touch</h1>
+             <p class="text-sans" style="font-size: 1rem; line-height: 1.6; opacity: 0.7; margin-bottom: 4rem;">
+                We'd love to hear from you. Reach out to us for any inquiries or collaborations.
+             </p>
+             
+             <!-- Contact Details -->
+             <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 5rem;">
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.6;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+                   <div>
+                      <div class="text-sans" style="font-size: 0.8rem; opacity: 0.5; margin-bottom: 0.3rem;">Email</div>
+                      <div class="text-sans" style="font-size: 1rem;">hello@ceahomespray.com</div>
+                   </div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.6;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                   <div>
+                      <div class="text-sans" style="font-size: 0.8rem; opacity: 0.5; margin-bottom: 0.3rem;">Phone</div>
+                      <div class="text-sans" style="font-size: 1rem;">+1 (234) 567-8900</div>
+                   </div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.6;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                   <div>
+                      <div class="text-sans" style="font-size: 0.8rem; opacity: 0.5; margin-bottom: 0.3rem;">Address</div>
+                      <div class="text-sans" style="font-size: 1rem; line-height: 1.5;">123 Nature Lane, Green City,<br>Earth 43578</div>
+                   </div>
+                </div>
+             </div>
+
+             <!-- Socials -->
+             <div style="display: flex; gap: 1.5rem;">
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+             </div>
+          </div>
+
+          <!-- Right Form -->
+          <div class="reveal-up contact-glass-form md-w-full" style="flex: 1; max-width: 650px;">
+             <form style="display: flex; flex-direction: column; gap: 2rem;">
+                <div style="display: flex; gap: 1.5rem;" class="md-flex-col">
+                   <input type="text" class="contact-input" placeholder="Your Name" />
+                   <input type="email" class="contact-input" placeholder="Email Address" />
+                </div>
+                <textarea class="contact-input" placeholder="Message" style="min-height: 250px; resize: none;"></textarea>
+                <button type="submit" class="btn" style="align-self: flex-start; border-radius: 2.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #EFECE1; padding: 1.2rem 2.8rem; text-transform:none; font-size: 1rem; display: flex; align-items: center; gap: 1rem;">
+                   Send Message &nbsp; &rarr;
+                </button>
+             </form>
+          </div>
+
+       </div>
+    </section>
+  </main>
+
+  <!-- Global Refined Footer -->
+  <footer class="footer-refined">
+    <div class="container">
+      <div style="max-width: 280px;">
+        <div class="logo font-serif" style="margin-bottom: 1rem; font-size: 2.5rem;">Cea.</div>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin-bottom: 2rem;">Premium home sprays crafted with nature's finest aromas to refresh, relax and rejuvenate.</p>
+
+        <div class="social-links">
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Shop</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html" class="footer-link">Home Sprays</a></li>
+            <li><a href="products.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="products.html" class="footer-link">Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Company</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="story.html" class="footer-link">Our Story</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Help</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="#" class="footer-link">FAQs</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Newsletter</h4>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 2rem; line-height: 1.6;">Subscribe for updates and exclusive offers.</p>
+        <div class="newsletter-pill">
+          <input type="email" class="newsletter-input" placeholder="Your email" />
+          <button class="newsletter-btn">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container text-sans" style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); text-align: center; font-size: 0.8rem; opacity: 0.4;">
+      &copy; 2024 Cea. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

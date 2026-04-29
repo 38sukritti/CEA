@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Collection | Cea.</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dark-mode">
+
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo font-serif">Cea.</div>
+      <div class="preloader-line"></div>
+    </div>
+    <div class="preloader-bg-top"></div>
+    <div class="preloader-bg-bottom"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo font-serif">Cea.</div>
+      
+      <nav class="nav-links text-sans">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Collection</a>
+        <a href="story.html">Our Story</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="flex items-center" style="gap: 1.5rem;">
+           <div style="display:flex; gap:1rem; opacity: 0.8;" class="desktop-only">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="cart-trigger" stroke="currentColor" stroke-width="1.5" style="cursor:pointer;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+           </div>
+           <a href="products.html" class="btn btn-outline desktop-only" style="border-radius: 2rem; padding: 0.6rem 1.8rem; text-transform:none; letter-spacing:0; font-size:0.85rem; border-color:rgba(255,255,255,0.4); font-family:var(--font-sans);">Shop Now &rsaquo;</a>
+           
+           <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Collection</a>
+    <a href="story.html">Our Story</a>
+    <a href="sustainability.html">Sustainability</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main style="background-color: #EFECE1; color: #2B2C21; min-height: 100vh;">
+    <!-- SECTION: Our Collection -->
+    <section style="padding: 10rem 0 10rem 0;">
+       <div class="container">
+          <!-- Page Header -->
+          <div class="flex justify-between items-end" style="margin-bottom: 5rem;">
+             <div class="reveal-up">
+                <h1 class="font-serif" style="font-size: 3.5rem; margin-bottom: 1rem;">Our Collection</h1>
+                <p class="text-sans" style="font-size: 1rem; opacity: 0.7; max-width: 380px; line-height: 1.5;">
+                   Discover our range of premium home sprays, each with a unique story and aroma.
+                </p>
+             </div>
+             <a href="#" class="btn btn-outline reveal-up" style="border-radius: 2rem; border-color: rgba(0,0,0,0.15); color: #2B2C21; font-size: 0.8rem; padding: 0.6rem 1.8rem; text-transform:none;">View All Products</a>
+          </div>
+
+          <!-- Product Grid Overlay Mockup -->
+          <div class="product-grid">
+             
+             <!-- Navigation Arrows (Visual only to match mockup) -->
+             <div style="position:absolute; left: -3rem; top: 50%; transform:translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border:1px solid rgba(0,0,0,0.1); display:flex; justify-content:center; align-items:center; cursor:pointer; background: rgba(255,255,255,0.2);" class="desktop-only">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m15 18-6-6 6-6"/></svg>
+             </div>
+             <div style="position:absolute; right: -3rem; top: 50%; transform:translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border:1px solid rgba(0,0,0,0.1); display:flex; justify-content:center; align-items:center; cursor:pointer; background: rgba(255,255,255,0.2);" class="desktop-only">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m9 18 6-6-6-6"/></svg>
+             </div>
+
+             <!-- Card 1: Rainy Flowers -->
+             <a href="product-detail.html?id=p1" class="reveal-up product-card product-trigger" data-id="p1">
+                <img src="/images/rainyflowers.jpeg" alt="Rainy Flowers" />
+                <div class="product-card-overlay">
+                   <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                      <div>
+                         <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 0.2rem;">Rainy Flowers</h3>
+                         <p class="text-sans" style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 1.5rem;">Floral &middot; Fresh &middot; Calm</p>
+                      </div>
+                      <div class="price-tag">99 AED</div>
+                   </div>
+                   <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span class="text-sans" style="font-size: 0.95rem; font-weight:500;">Shop Now</span>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                   </div>
+                </div>
+             </a>
+
+             <!-- Card 2: Musk Rivers -->
+             <a href="product-detail.html?id=p2" class="reveal-up product-card product-trigger" data-id="p2">
+                <img src="/images/muskrivers.jpeg" alt="Musk Rivers" />
+                <div class="product-card-overlay">
+                   <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                      <div>
+                         <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 0.2rem;">Musk Rivers</h3>
+                         <p class="text-sans" style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 1.5rem;">Woody &middot; Musk &middot; Warm</p>
+                      </div>
+                      <div class="price-tag">99 AED</div>
+                   </div>
+                   <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span class="text-sans" style="font-size: 0.95rem; font-weight:500;">Shop Now</span>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                   </div>
+                </div>
+             </a>
+
+             <!-- Card 3: Warm Pearl -->
+             <a href="product-detail.html?id=p3" class="reveal-up product-card product-trigger" data-id="p3">
+                <img src="/images/warmPearl.jpeg" alt="Warm Pearl" />
+                <div class="product-card-overlay">
+                   <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                      <div>
+                         <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 0.2rem;">Warm Pearl</h3>
+                         <p class="text-sans" style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 1.5rem;">Soft &middot; Warm &middot; Elegant</p>
+                      </div>
+                      <div class="price-tag">99 AED</div>
+                   </div>
+                   <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span class="text-sans" style="font-size: 0.95rem; font-weight:500;">Shop Now</span>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                   </div>
+                </div>
+             </a>
+
+             <!-- Card 4: Based on Musk -->
+             <a href="product-detail.html?id=p4" class="reveal-up product-card product-trigger" data-id="p4">
+                <img src="/images/all.jpeg" alt="Based on Musk" />
+                <div class="product-card-overlay">
+                   <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                      <div>
+                         <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 0.2rem;">Based on Musk</h3>
+                         <p class="text-sans" style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 1.5rem;">Signature &middot; Collection &middot; Musk</p>
+                      </div>
+                      <div class="price-tag">280 AED</div>
+                   </div>
+                   <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span class="text-sans" style="font-size: 0.95rem; font-weight:500;">Shop Now (Set of 3)</span>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                   </div>
+                </div>
+             </a>
+
+
+          </div>
+       </div>
+    </section>
+  </main>
+
+  <!-- Global Refined Footer -->
+  <footer class="footer-refined">
+    <div class="container">
+      <div style="max-width: 280px;">
+        <div class="logo font-serif" style="margin-bottom: 1rem; font-size: 2.5rem;">Cea.</div>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin-bottom: 2rem;">Premium home sprays crafted with nature's finest aromas to refresh, relax and rejuvenate.</p>
+
+        <div class="social-links">
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Shop</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html" class="footer-link">Home Sprays</a></li>
+            <li><a href="products.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="products.html" class="footer-link">Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Company</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="story.html" class="footer-link">Our Story</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Help</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="#" class="footer-link">FAQs</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Newsletter</h4>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 2rem; line-height: 1.6;">Subscribe for updates and exclusive offers.</p>
+        <div class="newsletter-pill">
+          <input type="email" class="newsletter-input" placeholder="Your email" />
+          <button class="newsletter-btn">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container text-sans" style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); text-align: center; font-size: 0.8rem; opacity: 0.4;">
+      &copy; 2024 Cea. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Cea.</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dark-mode">
+
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo font-serif">Cea.</div>
+      <div class="preloader-line"></div>
+    </div>
+    <div class="preloader-bg-top"></div>
+    <div class="preloader-bg-bottom"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner" style="padding: 0.6rem 0; align-items:center;">
+      <div class="logo font-serif" style="font-size:2rem;">Cea.</div>
+      <nav class="nav-links text-sans" style="font-size: 0.9rem; gap: 3rem; display:flex;">
+        <a href="index.html" style="opacity: 0.8;">Home</a>
+        <a href="products.html" style="opacity: 1;">Collection</a>
+        <a href="story.html" style="opacity: 0.8;">Our Story</a>
+        <a href="sustainability.html" style="opacity: 0.8;">Sustainability</a>
+        <a href="contact.html" style="opacity: 0.8;">Contact</a>
+      </nav>
+      <div class="header-actions" style="display:flex; align-items:center; gap: 1.5rem;">
+            <div style="display:flex; gap:1rem; opacity: 0.8;" class="desktop-only">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="cart-trigger" stroke="currentColor" stroke-width="1.5" style="cursor:pointer;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+        <a href="products.html" class="btn btn-outline" style="border-radius: 2rem; padding: 0.6rem 1.8rem; text-transform:none; letter-spacing:0; font-size:0.85rem; border-color:rgba(255,255,255,0.4); font-family:var(--font-sans);">Shop Now &rsaquo;</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="background-color: #EFECE1; color: #2B2C21; min-height: 100vh;">
+    <!-- SECTION: Product Info -->
+    <section style="padding: 10rem 0 5rem 0;">
+       <div class="container">
+          <!-- Breadcrumbs -->
+          <div class="text-sans" style="font-size: 0.75rem; opacity: 0.5; margin-bottom: 2rem; display: flex; gap: 0.5rem; align-items: center;">
+             <a href="index.html" style="color: inherit; text-decoration: none;">Home</a> <span>/</span>
+             <a href="products.html" style="color: inherit; text-decoration: none;">Collection</a> <span>/</span>
+             <span id="breadcrumb-current" style="color: #2B2C21; font-weight: 500;">Rainy Flowers</span>
+          </div>
+
+          <div class="flex" style="gap: 5rem; align-items: flex-start;">
+             <!-- Left: Image Gallery -->
+             <div style="flex: 1.2; display: flex; gap: 1.5rem;">
+                <!-- Thumbnails Column -->
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                   <div class="gallery-thumb active" style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid transparent;">
+                      <img src="/images/rainyflowers.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+                   </div>
+                   <div class="gallery-thumb" style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid transparent;">
+                      <img src="/images/all.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+                   </div>
+                   <div class="gallery-thumb" style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid transparent;">
+                      <img src="/images/cea1.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+                   </div>
+                   <div class="gallery-thumb" style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; cursor: pointer; border: 2px solid transparent;">
+                      <img src="/images/warmpearl2.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+                   </div>
+                </div>
+                <!-- Main Image Container -->
+                <div style="flex: 1; position: relative;">
+                   <div id="main-product-img-container" style="width: 100%; height: 600px; border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.1);">
+                      <img id="main-product-img" src="/images/rainyflowers.jpeg" style="width: 100%; height: 100%; object-fit: cover;" />
+                   </div>
+                   <!-- Subtle Decoration -->
+                   <div style="position: absolute; left: -40px; bottom: 20px; width: 150px; z-index: -1; opacity: 0.8;">
+                      <img src="/images/isolated_bottle.png" style="width: 100%; height: auto; filter: blur(5px);" />
+                   </div>
+                </div>
+             </div>
+
+              <!-- Right: Product Controls -->
+              <div style="flex: 1; padding-top: 1rem;">
+                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                    <h1 id="detail-title" class="font-serif" style="font-size: 3.5rem; line-height: 1.1;">Rainy Flowers<br>Home Spray</h1>
+                    <div id="detail-price" class="font-sans" style="font-size: 1.8rem; font-weight: 500; color: #3C4223; margin-top: 0.5rem;">99 AED</div>
+                 </div>
+                 <p id="detail-notes" class="text-sans" style="font-size: 1rem; opacity: 0.7; margin-bottom: 2.5rem; letter-spacing: 0.05rem;">Floral &middot; Fresh &middot; Calm</p>
+                 
+                 <p id="detail-desc" class="text-sans" style="font-size: 1rem; line-height: 1.7; opacity: 0.8; margin-bottom: 3.5rem; max-width: 440px;">
+                    A delicate blend of fresh flowers and soft citrus notes that brings the feeling of rain-kissed petals into your home.
+                 </p>
+
+                 <!-- Shipping & Quantity Info -->
+                 <div style="margin-bottom: 3rem; background: rgba(0,0,0,0.02); padding: 1.5rem; border-radius: 15px; border: 1px solid rgba(0,0,0,0.05);">
+                    <div class="flex items-center" style="gap: 0.8rem; margin-bottom: 1rem;">
+                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                       <span id="detail-shipping" class="text-sans" style="font-size: 0.9rem; font-weight: 500; opacity: 0.8;">Free shipping (North Emirates) · 30 AED others</span>
+                    </div>
+                    <div class="flex items-center" style="gap: 0.8rem;">
+                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                       <span id="detail-qty-info" class="text-sans" style="font-size: 0.9rem; font-weight: 500; opacity: 0.8;">1 Bottle</span>
+                    </div>
+                 </div>
+
+                 <!-- Size Selection -->
+                 <div style="margin-bottom: 3rem;">
+                    <label class="text-sans" style="display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 1.2rem;">Size</label>
+                    <div style="display: flex; gap: 1rem;">
+                       <button class="size-btn active" style="padding: 0.8rem 1.8rem; border-radius: 2rem; border: 1px solid #2B2C21; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-size: 0.85rem;">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                          200ml
+                       </button>
+                       <button class="size-btn" style="padding: 0.8rem 1.8rem; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.1); background: transparent; opacity: 0.6; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-size: 0.85rem;">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                          500ml
+                       </button>
+                    </div>
+                 </div>
+
+                 <!-- Quantity Selector -->
+                 <div style="margin-bottom: 4rem;">
+                    <label class="text-sans" style="display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 1.2rem;">Quantity</label>
+                    <div style="display: inline-flex; align-items: center; background: rgba(0,0,0,0.03); padding: 0.5rem 1.2rem; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.05);">
+                       <button id="qty-minus" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #2B2C21; padding: 0 1rem;">-</button>
+                       <span id="qty-val" class="font-sans" style="font-size: 1.1rem; width: 40px; text-align: center;">1</span>
+                       <button id="qty-plus" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #2B2C21; padding: 0 1rem;">+</button>
+                    </div>
+                 </div>
+
+                 <!-- Action Buttons -->
+                 <div style="display: flex; gap: 1.5rem;">
+                    <button id="add-to-cart-btn" class="btn btn-primary" style="flex: 1; border-radius: 2rem; background: #3C4223; color: white; padding: 1rem; font-weight: 500; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 0.8rem; font-size: 1rem;">
+                       Add to Cart &nbsp; &rarr;
+                    </button>
+                    <button class="btn btn-outline" style="flex: 1; border-radius: 2rem; border: 1px solid rgba(0,0,0,0.1); padding: 1rem; font-weight: 500; cursor: pointer; background: white; font-size: 1rem;">
+                       Buy Now
+                    </button>
+                 </div>
+              </div>
+
+          </div>
+          
+          <!-- Bottom Features -->
+          <div class="flex justify-between" style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(0,0,0,0.05);">
+             <div class="flex items-center" style="gap: 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div class="text-sans" style="font-size: 0.8rem; font-weight: 500; opacity: 0.8; line-height: 1.4;">Long Lasting<br>Fragrance</div>
+             </div>
+             <div class="flex items-center" style="gap: 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <div class="text-sans" style="font-size: 0.8rem; font-weight: 500; opacity: 0.8; line-height: 1.4;">Natural<br>Ingredients</div>
+             </div>
+             <div class="flex items-center" style="gap: 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <div class="text-sans" style="font-size: 0.8rem; font-weight: 500; opacity: 0.8; line-height: 1.4;">Safe for<br>Home</div>
+             </div>
+             <div class="flex items-center" style="gap: 1rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3C4223" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                <div class="text-sans" style="font-size: 0.8rem; font-weight: 500; opacity: 0.8; line-height: 1.4;">Premium<br>Quality</div>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- SECTION: Reviews -->
+    <section style="background-color: #E6E2D3; padding: 10rem 0; color: #2B2C21;">
+       <div class="container">
+          <div class="flex" style="gap: 6rem; align-items: flex-start;">
+             <div style="flex: 0.8;" class="reveal-up">
+                <h2 class="font-serif" style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;">Loved by Thousands</h2>
+                <p class="text-sans" style="font-size: 1rem; line-height: 1.6; opacity: 0.7; margin-bottom: 3.5rem; max-width: 320px;">
+                   Here's what our customers have to say about their experience with Cea.
+                </p>
+                <a href="#" class="btn btn-outline" style="border-radius: 2rem; border-color: rgba(0,0,0,0.15); color: #2B2C21; font-size: 0.85rem; padding: 0.8rem 2.2rem; text-transform:none; font-weight: 500;">
+                   View All Reviews &nbsp; &rarr;
+                </a>
+             </div>
+             
+             <!-- Review Cards -->
+             <div class="flex" style="flex: 1.5; gap: 1.5rem;">
+                <!-- Review 1 -->
+                <div class="reveal-up" style="flex: 1; background: #FAF9F6; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.02);">
+                   <div style="color: #BAA57E; margin-bottom: 1.5rem; font-size: 0.9rem;">★★★★★</div>
+                   <p id="review-text-1" class="text-sans" style="font-size: 0.95rem; line-height: 1.7; opacity: 0.85; margin-bottom: 2.5rem; min-height: 120px;">
+                      "The Rainy Flowers scent is absolutely divine! It freshens up my entire home with such a natural vibe."
+                   </p>
+                   <div style="display: flex; align-items: center; gap: 1rem;">
+                      <div style="width: 45px; height: 45px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                         <img src="https://i.pravatar.cc/100?u=sarah" style="width: 100%; height: 100%; object-fit: cover;" />
+                      </div>
+                      <div>
+                         <div id="review-user-1" style="font-size: 0.9rem; font-weight: 500;">Sarah J.</div>
+                         <div style="font-size: 0.7rem; opacity: 0.5;">Verified Buyer</div>
+                      </div>
+                   </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="reveal-up" style="flex: 1; background: #FAF9F6; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.02); transition-delay: 0.1s;">
+                   <div style="color: #BAA57E; margin-bottom: 1.5rem; font-size: 0.9rem;">★★★★★</div>
+                   <p id="review-text-2" class="text-sans" style="font-size: 0.95rem; line-height: 1.7; opacity: 0.85; margin-bottom: 2.5rem; min-height: 120px;">
+                      "Warm Pearl is my favorite for cozy evenings. So calming and elegant. Highly recommended!"
+                   </p>
+                   <div style="display: flex; align-items: center; gap: 1rem;">
+                      <div style="width: 45px; height: 45px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                         <img src="https://i.pravatar.cc/100?u=james" style="width: 100%; height: 100%; object-fit: cover;" />
+                      </div>
+                      <div>
+                         <div id="review-user-2" style="font-size: 0.9rem; font-weight: 500;">James L.</div>
+                         <div style="font-size: 0.7rem; opacity: 0.5;">Verified Buyer</div>
+                      </div>
+                   </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="reveal-up" style="flex: 1; background: #FAF9F6; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.02); transition-delay: 0.2s;">
+                   <div style="color: #BAA57E; margin-bottom: 1.5rem; font-size: 0.9rem;">★★★★★</div>
+                   <p id="review-text-3" class="text-sans" style="font-size: 0.95rem; line-height: 1.7; opacity: 0.85; margin-bottom: 2.5rem; min-height: 120px;">
+                      "Musk Rivers gives such a luxurious and soothing vibe. The quality is unmatched by any other spray."
+                   </p>
+                   <div style="display: flex; align-items: center; gap: 1rem;">
+                      <div style="width: 45px; height: 45px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                         <img src="https://i.pravatar.cc/100?u=priya" style="width: 100%; height: 100%; object-fit: cover;" />
+                      </div>
+                      <div>
+                         <div id="review-user-3" style="font-size: 0.9rem; font-weight: 500;">Priya M.</div>
+                         <div style="font-size: 0.7rem; opacity: 0.5;">Verified Buyer</div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          
+          <!-- Brand Logos -->
+          <div class="flex justify-between" style="margin-top: 10rem; opacity: 0.4; filter: grayscale(1);">
+             <div class="font-serif" style="font-size: 1.8rem; font-weight: 700; letter-spacing: -0.05rem;">VOGUE</div>
+             <div class="font-serif" style="font-size: 1.8rem; font-weight: 700; letter-spacing: -0.05rem;">ELLE DECOR</div>
+             <div class="font-serif" style="font-size: 1.8rem; font-weight: 700; letter-spacing: -0.05rem;">HouseBeautiful</div>
+             <div class="font-serif" style="font-size: 1.8rem; font-weight: 700; letter-spacing: -0.05rem;">Forbes</div>
+             <div class="font-serif" style="font-size: 1.8rem; font-weight: 700; letter-spacing: -0.05rem;">ARCHITECTURAL DIGEST</div>
+          </div>
+       </div>
+    </section>
+  </main>
+
+  <!-- Global Refined Footer -->
+  <footer class="footer-refined">
+    <div class="container flex justify-between" style="align-items:flex-start;">
+      <div style="max-width: 280px;">
+        <div class="logo font-serif" style="margin-bottom: 1rem; font-size: 2.5rem;">Cea.</div>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin-bottom: 2rem;">Premium home sprays crafted with nature's finest aromas to refresh, relax and rejuvenate.</p>
+
+        <div class="social-links">
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex" style="gap: 4rem;">
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Shop</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html" class="footer-link">Home Sprays</a></li>
+            <li><a href="products.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="products.html" class="footer-link">Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Company</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="story.html" class="footer-link">Our Story</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Help</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="#" class="footer-link">FAQs</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="max-width: 320px;">
+        <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Newsletter</h4>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 2rem; line-height: 1.6;">Subscribe for updates and exclusive offers.</p>
+        <div class="newsletter-pill">
+          <input type="email" class="newsletter-input" placeholder="Your email" />
+          <button class="newsletter-btn">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container text-sans" style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); text-align: center; font-size: 0.8rem; opacity: 0.4;">
+      &copy; 2024 Cea. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module">
+    import { initProductDetailPage } from '/src/products.js';
+    window.addEventListener('load', initProductDetailPage);
+  </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story | Cea.</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dark-mode">
+
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo font-serif">Cea.</div>
+      <div class="preloader-line"></div>
+    </div>
+    <div class="preloader-bg-top"></div>
+    <div class="preloader-bg-bottom"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo font-serif">Cea.</div>
+      
+      <nav class="nav-links text-sans">
+        <a href="index.html">Home</a>
+        <a href="products.html">Collection</a>
+        <a href="story.html" class="active">Our Story</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="flex items-center" style="gap: 1.5rem;">
+           <div style="display:flex; gap:1rem; opacity: 0.8;" class="desktop-only">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="cart-trigger" stroke="currentColor" stroke-width="1.5" style="cursor:pointer;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+           </div>
+           <a href="products.html" class="btn btn-outline desktop-only" style="border-radius: 2rem; padding: 0.6rem 1.8rem; text-transform:none; letter-spacing:0; font-size:0.85rem; border-color:rgba(255,255,255,0.4); font-family:var(--font-sans);">Shop Now &rsaquo;</a>
+           
+           <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Collection</a>
+    <a href="story.html">Our Story</a>
+    <a href="sustainability.html">Sustainability</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main style="background-color: #1A1C14; color: #EFECE1;">
+    <section style="position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden;">
+
+      <!-- Background: all.jpeg warm bottles scene -->
+      <div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;">
+        <img src="/images/all.jpeg" style="width:100%; height:100%; object-fit:cover; object-position: center center;" />
+        <!-- dark overlay so text is readable -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(20,18,12,0.45);"></div>
+        <!-- stronger dark on left for text legibility -->
+        <div style="position:absolute; top:0; left:0; width:50%; height:100%; background: linear-gradient(to right, rgba(15,14,9,0.65) 60%, transparent);"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container md-flex-col" style="position:relative; z-index:10; width:100%; display:flex; justify-content:space-between; align-items:center; padding-top:5rem;">
+
+        <!-- LEFT: Text -->
+        <div style="max-width:440px;" class="md-w-full md-p-0">
+          <span class="text-sans" style="font-size:0.8rem; opacity:0.7; display:block; margin-bottom:1.5rem; letter-spacing:0.08em;">Our Story</span>
+          <h1 class="font-serif md-w-full" style="font-size:3.8rem; line-height:1.05; margin-bottom:2rem; color:#EFECE1;">Rooted in Nature,<br>Driven by Passion.</h1>
+          <p class="text-sans md-w-full" style="font-size:0.95rem; line-height:1.7; opacity:0.85; margin-bottom:1.2rem; color:#EFECE1;">
+            Cea. was born from a simple belief &ndash; that luxury and nature can coexist beautifully.
+          </p>
+          <p class="text-sans md-w-full" style="font-size:0.95rem; line-height:1.7; opacity:0.85; margin-bottom:3rem; color:#EFECE1;">
+            We create premium home sprays using high-quality natural ingredients to bring calm, comfort, and elegance into every home.
+          </p>
+          <a href="#" class="btn btn-outline" style="border-radius:2rem; border-color:rgba(255,255,255,0.35); color:#EFECE1; text-transform:none; font-size:0.88rem; padding:0.8rem 2.2rem; font-weight:400;">Read Our Journey &nbsp; &rarr;</a>
+        </div>
+
+        <!-- RIGHT: Arch with Cea. -->
+        <div style="position:relative; width:320px; height:420px; flex-shrink:0; margin-right:4%;" class="desktop-only">
+          <!-- Arch shape -->
+          <div style="
+            position:absolute; top:0; left:50%; transform:translateX(-50%);
+            width:260px; height:380px;
+            border-radius: 130px 130px 20px 20px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(4px);
+            display:flex; align-items:center; justify-content:center;
+          ">
+            <span class="font-serif" style="font-size:4rem; color:rgba(239,236,225,0.55); letter-spacing:-0.02em;">Cea.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Our Beginning -->
+    <section style="background-color:#EFECE1; color:#2B2C21; padding:8rem 0;">
+      <div class="container" style="display:flex; gap:6rem; align-items:center;">
+        <div style="flex:1;">
+          <span class="text-sans" style="font-size:0.75rem; letter-spacing:0.12em; opacity:0.5; display:block; margin-bottom:1.5rem; text-transform:uppercase;">How It Started</span>
+          <h2 class="font-serif" style="font-size:3rem; line-height:1.1; margin-bottom:2rem;">A Passion Project<br>Turned Purpose.</h2>
+          <p class="text-sans" style="font-size:0.95rem; line-height:1.8; opacity:0.75; margin-bottom:1.5rem;">It started in a small kitchen, experimenting with botanical extracts and essential oils. What began as a personal obsession with creating the perfect home ambiance quickly grew into something much bigger.</p>
+          <p class="text-sans" style="font-size:0.95rem; line-height:1.8; opacity:0.75; margin-bottom:1.5rem;">We noticed that most home sprays on the market were either full of harsh chemicals or lacked the depth and longevity of a truly premium fragrance. We set out to change that.</p>
+          <p class="text-sans" style="font-size:0.95rem; line-height:1.8; opacity:0.75;">Every Cea. formula is the result of months of testing, refining, and perfecting &mdash; until it feels exactly right.</p>
+        </div>
+        <div style="flex:1; position:relative; height:480px; border-radius:20px; overflow:hidden; box-shadow:0 40px 80px rgba(0,0,0,0.1);">
+          <img src="/images/rainyflowers.jpeg" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Timeline -->
+    <section style="background-color:#2B2C21; color:#EFECE1; padding:8rem 0;">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:5rem;">
+          <span class="text-sans" style="font-size:0.75rem; letter-spacing:0.12em; opacity:0.5; display:block; margin-bottom:1rem; text-transform:uppercase;">Our Journey</span>
+          <h2 class="font-serif" style="font-size:3rem; line-height:1.1;">Milestones That<br>Shaped Us.</h2>
+        </div>
+        <div style="display:flex; gap:0; position:relative;">
+          <div style="position:absolute; top:7px; left:0; width:100%; height:1px; background:rgba(255,255,255,0.1);"></div>
+          <div style="flex:1; padding-right:3rem; position:relative;">
+            <div style="width:14px; height:14px; border-radius:50%; background:#A79F88; margin-bottom:2rem;"></div>
+            <div class="text-sans" style="font-size:0.75rem; opacity:0.5; margin-bottom:0.5rem;">2020</div>
+            <h4 class="font-serif" style="font-size:1.3rem; margin-bottom:0.8rem;">The First Formula</h4>
+            <p class="text-sans" style="font-size:0.85rem; opacity:0.65; line-height:1.6;">Rainy Flowers was born &mdash; our first signature scent, crafted in a home kitchen with pure botanical extracts.</p>
+          </div>
+          <div style="flex:1; padding-right:3rem; position:relative;">
+            <div style="width:14px; height:14px; border-radius:50%; background:#A79F88; margin-bottom:2rem;"></div>
+            <div class="text-sans" style="font-size:0.75rem; opacity:0.5; margin-bottom:0.5rem;">2021</div>
+            <h4 class="font-serif" style="font-size:1.3rem; margin-bottom:0.8rem;">First 1,000 Customers</h4>
+            <p class="text-sans" style="font-size:0.85rem; opacity:0.65; line-height:1.6;">Word spread organically. Our community grew to 1,000 happy homes, each transformed by the power of natural scent.</p>
+          </div>
+          <div style="flex:1; padding-right:3rem; position:relative;">
+            <div style="width:14px; height:14px; border-radius:50%; background:#A79F88; margin-bottom:2rem;"></div>
+            <div class="text-sans" style="font-size:0.75rem; opacity:0.5; margin-bottom:0.5rem;">2022</div>
+            <h4 class="font-serif" style="font-size:1.3rem; margin-bottom:0.8rem;">The Full Collection</h4>
+            <p class="text-sans" style="font-size:0.85rem; opacity:0.65; line-height:1.6;">Musk Rivers and Warm Pearl joined the family, completing our trio of signature home fragrances.</p>
+          </div>
+          <div style="flex:1; position:relative;">
+            <div style="width:14px; height:14px; border-radius:50%; background:#A79F88; margin-bottom:2rem;"></div>
+            <div class="text-sans" style="font-size:0.75rem; opacity:0.5; margin-bottom:0.5rem;">2024</div>
+            <h4 class="font-serif" style="font-size:1.3rem; margin-bottom:0.8rem;">10K+ Homes Elevated</h4>
+            <p class="text-sans" style="font-size:0.85rem; opacity:0.65; line-height:1.6;">Over ten thousand homes now carry the essence of Cea. &mdash; and we're just getting started.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Values -->
+    <section style="background-color:#EFECE1; color:#2B2C21; padding:8rem 0;">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:5rem;">
+          <span class="text-sans" style="font-size:0.75rem; letter-spacing:0.12em; opacity:0.5; display:block; margin-bottom:1rem; text-transform:uppercase;">What We Stand For</span>
+          <h2 class="font-serif" style="font-size:3rem; line-height:1.1;">Our Values.</h2>
+        </div>
+        <div style="display:flex; gap:2rem;">
+          <div style="flex:1; padding:2.5rem; background:#F5F1E8; border-radius:16px;">
+            <div style="width:48px; height:48px; border-radius:50%; background:#3C4223; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EFECE1" stroke-width="1.5"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+            </div>
+            <h4 class="font-serif" style="font-size:1.4rem; margin-bottom:1rem;">Pure Ingredients</h4>
+            <p class="text-sans" style="font-size:0.88rem; line-height:1.7; opacity:0.7;">We never compromise on what goes into our bottles. Every ingredient is natural, ethically sourced, and chosen for its quality.</p>
+          </div>
+          <div style="flex:1; padding:2.5rem; background:#F5F1E8; border-radius:16px;">
+            <div style="width:48px; height:48px; border-radius:50%; background:#3C4223; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EFECE1" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4 class="font-serif" style="font-size:1.4rem; margin-bottom:1rem;">Transparency</h4>
+            <p class="text-sans" style="font-size:0.88rem; line-height:1.7; opacity:0.7;">We believe you deserve to know exactly what you're bringing into your home. Full ingredient lists, always.</p>
+          </div>
+          <div style="flex:1; padding:2.5rem; background:#F5F1E8; border-radius:16px;">
+            <div style="width:48px; height:48px; border-radius:50%; background:#3C4223; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EFECE1" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h4 class="font-serif" style="font-size:1.4rem; margin-bottom:1rem;">Sustainability</h4>
+            <p class="text-sans" style="font-size:0.88rem; line-height:1.7; opacity:0.7;">From eco-friendly packaging to carbon-conscious sourcing, every decision we make considers the planet.</p>
+          </div>
+          <div style="flex:1; padding:2.5rem; background:#F5F1E8; border-radius:16px;">
+            <div style="width:48px; height:48px; border-radius:50%; background:#3C4223; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EFECE1" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h4 class="font-serif" style="font-size:1.4rem; margin-bottom:1rem;">Made with Love</h4>
+            <p class="text-sans" style="font-size:0.88rem; line-height:1.7; opacity:0.7;">Every bottle is crafted with genuine care. We pour our passion into every formula so you can feel it the moment you spray.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Founder Quote -->
+    <section style="position:relative; background-color:#3C4223; color:#EFECE1; padding:8rem 0; overflow:hidden;">
+      <div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; opacity:0.15;">
+        <img src="/images/homepagefooter.png" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="container" style="position:relative; z-index:1; text-align:center; max-width:780px; margin:0 auto;">
+        <div class="font-serif" style="font-size:5rem; opacity:0.2; line-height:0.5; margin-bottom:2rem;">&ldquo;</div>
+        <blockquote class="font-serif" style="font-size:2.2rem; line-height:1.3; margin-bottom:2.5rem; font-weight:400;">Nature has always been the greatest perfumer. We simply learned to listen.</blockquote>
+        <div class="text-sans" style="font-size:0.85rem; opacity:0.6; letter-spacing:0.08em;">&mdash; Founder, Cea.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Refined Footer -->
+  <footer class="footer-refined">
+    <div class="container">
+      <div style="max-width: 280px;">
+        <div class="logo font-serif" style="margin-bottom: 1rem; font-size: 2.5rem;">Cea.</div>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin-bottom: 2rem;">Premium home sprays crafted with nature's finest aromas to refresh, relax and rejuvenate.</p>
+
+        <div class="social-links">
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="#" class="social-icon">
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Shop</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html" class="footer-link">Home Sprays</a></li>
+            <li><a href="products.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="products.html" class="footer-link">Accessories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Company</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="story.html" class="footer-link">Our Story</a></li>
+            <li><a href="sustainability.html" class="footer-link">Sustainability</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Help</h4>
+          <ul class="text-sans" style="font-size: 0.85rem; line-height: 2.2;">
+            <li><a href="#" class="footer-link">FAQs</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-sans" style="margin-bottom: 1.5rem; font-size: 0.95rem; font-weight:500;">Newsletter</h4>
+        <p class="text-sans" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 2rem; line-height: 1.6;">Subscribe for updates and exclusive offers.</p>
+        <div class="newsletter-pill">
+          <input type="email" class="newsletter-input" placeholder="Your email" />
+          <button class="newsletter-btn">
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container text-sans" style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); text-align: center; font-size: 0.8rem; opacity: 0.4;">
+      &copy; 2024 Cea. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
