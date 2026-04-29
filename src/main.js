@@ -95,12 +95,15 @@ window.addEventListener('load', () => {
       .to(bgTop, { yPercent: -100, duration: 1.2, ease: "expo.inOut" }, "-=0.3")
       .to(bgBottom, { yPercent: 100, duration: 1.2, ease: "expo.inOut" }, "<");
     
-    // Safety timeout: If preloader doesn't finish in 4s, force clear it
+    // Safety timeout: Force reveal after 2s regardless of asset loading
     setTimeout(() => {
        if (preloader.style.display !== 'none') {
-          gsap.to([bgTop, bgBottom, preloaderContent], { opacity: 0, duration: 0.5, onComplete: () => { preloader.style.display = 'none'; initPageAnimations(); } });
+          gsap.to(preloader, { opacity: 0, duration: 1, onComplete: () => { 
+            preloader.style.display = 'none'; 
+            initPageAnimations(); 
+          }});
        }
-    }, 4000);
+    }, 2000);
   } else {
     initPageAnimations();
   }
