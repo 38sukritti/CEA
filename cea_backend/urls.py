@@ -4,7 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from products.views import (
     HomeView, CollectionView, StoryView, 
-    SustainabilityView, ContactView, ProductDetailView, CheckoutView
+    SustainabilityView, ContactView, ProductDetailView, CheckoutView,
+    SuccessView, CancelView, create_checkout_session, stripe_webhook
 )
 
 urlpatterns = [
@@ -30,6 +31,12 @@ urlpatterns = [
     
     path('checkout.html', CheckoutView.as_view(), name='checkout'),
     path('checkout/', CheckoutView.as_view()),
+    
+    # Stripe Routes
+    path('create-checkout-session/', create_checkout_session, name='create_checkout_session'),
+    path('success/', SuccessView.as_view(), name='payment_success'),
+    path('cancel/', CancelView.as_view(), name='payment_cancel'),
+    path('webhook/stripe/', stripe_webhook, name='stripe_webhook'),
 ]
 
 if settings.DEBUG:

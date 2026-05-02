@@ -56,7 +56,7 @@ class Cart {
          <div style="padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.2);">
            <div class="flex justify-between text-sans" style="margin-bottom: 1.5rem; font-size: 1.1rem;">
              <span>Subtotal</span>
-             <strong id="cart-total">$0.00</strong>
+             <strong id="cart-total"><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align: middle; margin-right: 3px;'><path d='M7 5h5a7 7 0 0 1 0 14H7V5z'/><path d='M4 10h16'/><path d='M4 14h16'/></svg>0.00</strong>
            </div>
             <button id="checkout-btn" class="btn" style="width:100%; background:var(--beige-light); color:var(--olive-darker); border:none; padding:1.2rem; font-weight:500;">Checkout &nbsp; &rarr;</button>
          </div>
@@ -144,7 +144,7 @@ class Cart {
                      <span class="text-sans" style="font-size:0.85rem; width:20px; text-align:center;">${item.quantity}</span>
                      <button class="cart-plus" style="background:none; border:none; color:inherit; cursor:pointer;">&plus;</button>
                   </div>
-                  <strong class="text-sans">$${(item.price * item.quantity).toFixed(2)}</strong>
+                  <strong class="text-sans"><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align: middle; margin-right: 3px;'><path d='M7 5h5a7 7 0 0 1 0 14H7V5z'/><path d='M4 10h16'/><path d='M4 14h16'/></svg>${(item.price * item.quantity).toFixed(2)}</strong>
                </div>
              </div>
           </div>
@@ -152,7 +152,7 @@ class Cart {
       }).join('');
     }
 
-    this.totalDOM.innerText = `$${totalPrice.toFixed(2)}`;
+    this.totalDOM.innerHTML = `<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align: middle; margin-right: 3px;'><path d='M7 5h5a7 7 0 0 1 0 14H7V5z'/><path d='M4 10h16'/><path d='M4 14h16'/></svg>${totalPrice.toFixed(2)}`;
     document.querySelectorAll('.cart-badge').forEach(badge => {
       badge.innerText = totalItems;
       if(totalItems > 0) {

@@ -711,7 +711,7 @@ body:not(.dark-mode) .btn-outline:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 @media (max-width: 1024px) {
@@ -783,7 +783,7 @@ body:not(.dark-mode) .btn-outline:hover {
   opacity: 0.7;
   transition: opacity 0.3s;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .footer-link:hover {
@@ -876,4 +876,7 @@ body:not(.dark-mode) .btn-outline:hover {
   height: 1px;
   background: var(--gold-accent);
   margin: 0 auto;
+}
+.footer-refined .flex {
+  gap: 5rem;
 }

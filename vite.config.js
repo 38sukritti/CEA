@@ -11,7 +11,9 @@ export default defineConfig({
         story: resolve(__dirname, 'story.html'),
         sustainability: resolve(__dirname, 'sustainability.html'),
         productDetail: resolve(__dirname, 'product-detail.html'),
-        checkout: resolve(__dirname, 'checkout.html')
+        checkout: resolve(__dirname, 'checkout.html'),
+        success: resolve(__dirname, 'success.html'),
+        cancel: resolve(__dirname, 'cancel.html')
       }
     }
   }

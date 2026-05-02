@@ -81,7 +81,10 @@ const bgTop = document.querySelector('.preloader-bg-top');
 const bgBottom = document.querySelector('.preloader-bg-bottom');
 
 window.addEventListener('load', () => {
-  if (preloader) {
+  const preloaderSeen = sessionStorage.getItem('cea_preloader_seen');
+  
+  if (preloader && !preloaderSeen) {
+    sessionStorage.setItem('cea_preloader_seen', 'true');
     const tl = gsap.timeline({
       onComplete: () => {
         preloader.style.display = 'none';
@@ -97,6 +100,7 @@ window.addEventListener('load', () => {
       .to(bgBottom, { yPercent: 100, duration: 0.9, ease: "power3.inOut" }, "<");
 
   } else {
+    if (preloader) preloader.style.display = 'none';
     initPageAnimations();
   }
 });

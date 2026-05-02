@@ -8,9 +8,9 @@ export function initProductDetailPage() {
     p1: {
       name: "Rainy Flowers",
       notes: "Floral · Fresh · Calm",
-      price: "99 AED",
+      price: "99",
       quantityInfo: "1 Bottle",
-      shippingInfo: "Free shipping (North Emirates) · 30 AED others",
+      shippingInfo: "Free delivery northern UAE- Dubai, Sharjah, Ajman, Umm Al Khaimmah, Umm Al Quwain. Delivery Charges- 30 aed for rest of UAE.",
       desc: "A delicate blend of fresh flowers and soft citrus notes that brings the feeling of rain-kissed petals into your home.",
       img: "/images/rainyflowers.jpeg",
       gallery: ["/images/rainyflowers.jpeg", "/images/rainyflowers2.jpeg", "/images/rainyflowers3.jpeg", "/images/rainyflowers4.jpeg"],
@@ -53,9 +53,9 @@ export function initProductDetailPage() {
     p4: {
       name: "Based on Musk",
       notes: "Signature · Collection · Musk",
-      price: "280 AED",
+      price: "280",
       quantityInfo: "Set of 3 Perfumes",
-      shippingInfo: "Free shipping (North Emirates) · 30 AED others",
+      shippingInfo: "Free delivery northern UAE- Dubai, Sharjah, Ajman, Umm Al Khaimmah, Umm Al Quwain. Delivery Charges- 30 aed for rest of UAE.",
       desc: "Our exclusive 'Based on Musk' collection features three unique interpretations of musk, curated to provide a layered and long-lasting aromatic experience.",
       img: "/images/all.jpeg",
       gallery: ["/images/all.jpeg", "/images/rainyflowers.jpeg", "/images/muskrivers.jpeg", "/images/warmPearl.jpeg"],
@@ -79,7 +79,7 @@ export function initProductDetailPage() {
 
   // New info: Price & Shipping
   if (document.getElementById('detail-price')) {
-    document.getElementById('detail-price').textContent = data.price;
+    document.getElementById('detail-price').innerHTML = `<svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align: middle; margin-right: 5px;'><path d='M7 5h5a7 7 0 0 1 0 14H7V5z'/><path d='M4 10h16'/><path d='M4 14h16'/></svg>${data.price}`;
   }
   if (document.getElementById('detail-shipping')) {
     document.getElementById('detail-shipping').textContent = data.shippingInfo;
@@ -152,7 +152,7 @@ export function initProductDetailPage() {
     addToCartBtn.addEventListener('click', () => {
       if (window.CartManager) {
         const selectedSize = document.querySelector('.size-btn.active')?.textContent || '100ml';
-        const cleanPrice = parseFloat(data.price.replace(' AED', ''));
+        const cleanPrice = parseFloat(data.price.replace(/[^\d.]/g, ''));
         
         window.CartManager.addItem({
           id: productId,
