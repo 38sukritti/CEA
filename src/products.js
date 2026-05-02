@@ -175,6 +175,29 @@ export function initProductDetailPage() {
     });
   }
 
+  // Buy Now logic
+  const buyNowBtn = document.getElementById('buy-now-btn');
+  if (buyNowBtn) {
+    buyNowBtn.addEventListener('click', () => {
+      if (window.CartManager) {
+        const selectedSize = document.querySelector('.size-btn.active')?.textContent || '100ml';
+        const cleanPrice = parseFloat(data.price.replace(/[^\d.]/g, ''));
+        
+        window.CartManager.addItem({
+          id: productId,
+          name: data.name,
+          price: cleanPrice,
+          image: data.img,
+          size: selectedSize,
+          quantity: qty
+        });
+        
+        // Redirect to checkout immediately
+        window.location.href = 'checkout.html';
+      }
+    });
+  }
+
   // GSAP Entrance
   gsap.from('.reveal-up', {
     y: 40,
