@@ -23,9 +23,9 @@ export function initProductDetailPage() {
     p2: {
       name: "Musk Rivers",
       notes: "Woody · Musk · Warm",
-      price: "99 AED",
+      price: "99",
       quantityInfo: "1 Bottle",
-      shippingInfo: "Free shipping (North Emirates) · 30 AED others",
+      shippingInfo: "Free delivery northern UAE- Dubai, Sharjah, Ajman, Umm Al Khaimmah, Umm Al Quwain. Delivery Charges- 30 aed for rest of UAE.",
       desc: "A sophisticated, deep woodland essence intertwining raw musk with twilight amber for a truly relaxing atmosphere.",
       img: "/images/muskrivers.jpeg",
       gallery: ["/images/muskrivers.jpeg", "/images/muskrivers2.jpeg", "/images/muskrivers3.jpeg", "/images/muskrivers4.jpeg"],
@@ -38,9 +38,9 @@ export function initProductDetailPage() {
     p3: {
       name: "Warm Pearl",
       notes: "Soft · Warm · Elegant",
-      price: "99 AED",
+      price: "99",
       quantityInfo: "1 Bottle",
-      shippingInfo: "Free shipping (North Emirates) · 30 AED others",
+      shippingInfo: "Free delivery northern UAE- Dubai, Sharjah, Ajman, Umm Al Khaimmah, Umm Al Quwain. Delivery Charges- 30 aed for rest of UAE.",
       desc: "A luxurious caress of vanilla pearl and soft cashmere woods, transforming any space into an elegant retreat.",
       img: "/images/warmPearl.jpeg",
       gallery: ["/images/warmPearl.jpeg", "/images/warmpearl2.jpeg", "/images/warmpearl3.jpeg", "/images/warmPearl4.jpeg"],
