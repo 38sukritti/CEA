@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation - Cea.</title>
+    <style>
+        body { font-family: 'Georgia', serif; color: #2B2C21; line-height: 1.6; margin: 0; padding: 0; background-color: #F8F7F2; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .header { text-align: center; margin-bottom: 40px; }
+        .logo { font-size: 32px; font-weight: bold; color: #3C4223; text-decoration: none; }
+        .hero { background: #3C4223; color: #ffffff; padding: 30px; text-align: center; border-radius: 8px; margin-bottom: 30px; }
+        .hero h1 { margin: 0; font-size: 24px; font-weight: normal; }
+        .order-details { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .order-details h2 { font-size: 18px; color: #3C4223; margin-top: 0; }
+        .item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .totals { margin-top: 20px; text-align: right; }
+        .totals div { margin-bottom: 5px; }
+        .total-row { font-size: 1.2em; font-weight: bold; color: #3C4223; border-top: 1px solid #eee; padding-top: 10px; margin-top: 10px; }
+        .footer { text-align: center; font-size: 12px; color: #999; margin-top: 40px; }
+        .shipping-info { background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #f0f0f0; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Cea.</div>
+        </div>
+        
+        <div class="hero">
+            <h1>Thank You for Your Order!</h1>
+            <p>Your premium scent is being prepared for shipment.</p>
+        </div>
+
+        <div class="shipping-info">
+            <h2 style="font-size: 18px; margin-top: 0; color: #3C4223;">Shipping Details</h2>
+            <p><strong>Name:</strong> {{ order.first_name }} {{ order.last_name }}</p>
+            <p><strong>Address:</strong> {{ order.address }}, {{ order.city }}, {{ order.emirate }}</p>
+            <p><strong>Phone:</strong> {{ order.phone }}</p>
+        </div>
+
+        <div class="order-details">
+            <h2>Order Summary</h2>
+            <div class="item">
+                <span>{{ order.product_name }}</span>
+                <span>AED {{ order.amount }}</span>
+            </div>
+        </div>
+
+        <div class="totals">
+            <div>Subtotal: AED {{ order.amount }}</div>
+            <div>Shipping: {% if order.shipping_cost == 0 %}Free{% else %}AED {{ order.shipping_cost }}{% endif %}</div>
+            <div class="total-row">Total: AED {{ order.total_amount }}</div>
+        </div>
+
+        <div class="hero" style="background: #FAF9F6; color: #2B2C21; border: 1px solid #eee; margin-top: 40px;">
+            <p style="margin: 0;">"The order will soon be delivered to your doorstep."</p>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 Cea. Premium Scented Home Sprays. UAE.<br>
+            If you have any questions, please contact us at {{ admin_email }}.
+        </div>
+    </div>
+</body>
+</html>

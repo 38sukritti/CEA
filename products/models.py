@@ -30,8 +30,21 @@ class Order(models.Model):
         ('failed', 'Failed'),
     ]
 
+    # Customer Info
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    
+    # Shipping Info
+    address = models.TextField(blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+    emirate = models.CharField(max_length=100, blank=True, null=True)
+    shipping_cost = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+
     product_name = models.CharField(max_length=255)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    amount = models.DecimalField(max_digits=10, decimal_places=2) # Subtotal
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00) # Subtotal + Shipping
     currency = models.CharField(max_length=10, default='AED')
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending')
     stripe_session_id = models.CharField(max_length=255, unique=True)
@@ -39,4 +52,5 @@ class Order(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'Order {self.id} - {self.product_name} ({self.payment_status})'
+        return f'Order {self.id} - {self.first_name} {self.last_name} ({self.payment_status})'
+
