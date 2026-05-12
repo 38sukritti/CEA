@@ -55,6 +55,7 @@ def create_checkout_session(request):
             data = json.loads(request.body)
             amount = float(data.get('amount', 99)) # Subtotal
             product_name = data.get('product_name', 'Cea Luxury Scent')
+            product_name = " ".join(product_name.split()) # Clean newlines/spaces
             
             # Customer Data
             first_name = data.get('first_name', '')

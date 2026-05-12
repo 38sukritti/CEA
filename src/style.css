@@ -791,10 +791,30 @@ body:not(.dark-mode) .btn-outline:hover {
 }
 
 .footer-refined {
+  position: relative;
   background-color: #1A1C14;
   color: #EFECE1;
   padding: 8rem 0 3rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.footer-refined::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/homepagefooter.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.25; /* Subtle background as requested */
+  z-index: 0;
+}
+
+.footer-refined > .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* Social Links */

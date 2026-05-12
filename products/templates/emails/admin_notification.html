@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Order Received - Cea.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+        
+        body { 
+            font-family: 'Inter', Helvetica, Arial, sans-serif; 
+            color: #2B2C21; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #F8F7F2; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 40px auto; 
+            background: #ffffff; 
+            border: 1px solid #E0DFD8;
+            border-radius: 8px; 
+            overflow: hidden;
+        }
+        .header { 
+            background-color: #3C4223;
+            padding: 25px;
+            text-align: center; 
+        }
+        .logo { 
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px; 
+            color: #EFECE1; 
+            text-decoration: none; 
+        }
+        .alert-bar {
+            background-color: #A79F88;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .content { 
+            padding: 40px; 
+        }
+        .content h1 { 
+            font-family: 'Cormorant Garamond', serif;
+            margin: 0 0 25px 0; 
+            font-size: 28px; 
+            color: #3C4223;
+        }
+        .order-meta {
+            background: #FBFBFA;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .label { color: #888; }
+        .value { font-weight: 600; color: #1A1C14; }
+        
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #A79F88;
+            margin: 30px 0 15px 0;
+            border-bottom: 1px solid #F0EFEA;
+            padding-bottom: 10px;
+        }
+        .info-grid {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .info-grid div { margin-bottom: 5px; }
+        
+        .footer { 
+            padding: 30px;
+            text-align: center; 
+            font-size: 12px; 
+            color: #999; 
+            border-top: 1px solid #F0EFEA;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Cea.</div>
+        </div>
+        <div class="alert-bar">New Order #{{ order.order_number }}</div>
+        
+        <div class="content">
+            <h1>You received a new order</h1>
+            
+            <div class="order-meta">
+                <div class="meta-row">
+                    <span class="label">Status</span>
+                    <span class="value" style="color: #27ae60;">PAYMENT COMPLETED</span>
+                </div>
+                <div class="meta-row">
+                    <span class="label">Date</span>
+                    <span class="value">{{ order.created_at|date:"F j, Y, g:i a" }}</span>
+                </div>
+                <div class="meta-row">
+                    <span class="label">Order ID</span>
+                    <span class="value">{{ order.order_number }}</span>
+                </div>
+            </div>
+
+            <div class="section-title">Customer Details</div>
+            <div class="info-grid">
+                <div class="value">{{ order.first_name }} {{ order.last_name }}</div>
+                <div>{{ order.email }}</div>
+                <div>{{ order.phone }}</div>
+            </div>
+
+            <div class="section-title">Shipping Address</div>
+            <div class="info-grid">
+                <div>{{ order.address }}</div>
+                <div>{{ order.city }}, {{ order.emirate }}</div>
+            </div>
+
+            <div class="section-title">Items Purchased</div>
+            <div style="font-size: 15px; background: #F8F7F2; padding: 15px; border-radius: 6px;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span class="value">{{ order.product_name }}</span>
+                    <span class="value">AED {{ order.total_amount }}</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <p style="font-size: 14px; color: #666;">Log in to your dashboard to fulfill this order.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            Admin Notification System | Cea Luxury Scent <br>
+            This is an automated notification.
+        </div>
+    </div>
+</body>
+</html>

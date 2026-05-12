@@ -5,29 +5,32 @@ from django.conf import settings
 
 def send_order_confirmation_email(order):
     """
-    Sends order confirmation email to the customer and the admin.
+    Sends premium order confirmation emails.
+    Customer: Payment Successful Receipt
+    Admin: New Order Notification
     """
-    subject = f'Order Confirmation - {order.product_name} | Cea.'
     from_email = settings.DEFAULT_FROM_EMAIL or 'noreply@cea.ae'
-    to_customer = order.email
     to_admin = settings.ADMIN_EMAIL
 
-    context = {
+    # 1. Send to Customer
+    customer_subject = f'Payment Successful - Order #{order.order_number} | Cea.'
+    customer_html = render_to_string('emails/customer_confirmation.html', {
         'order': order,
         'admin_email': to_admin
-    }
-
-    # Render HTML content
-    html_content = render_to_string('emails/order_confirmation.html', context)
-    text_content = strip_tags(html_content)
-
-    # Send to Customer
-    msg_customer = EmailMultiAlternatives(subject, text_content, from_email, [to_customer])
-    msg_customer.attach_alternative(html_content, "text/html")
+    })
+    customer_text = strip_tags(customer_html)
+    
+    msg_customer = EmailMultiAlternatives(customer_subject, customer_text, from_email, [order.email])
+    msg_customer.attach_alternative(customer_html, "text/html")
     msg_customer.send()
 
-    # Send to Admin (with slightly different subject)
-    admin_subject = f'New Order Received - Order #{order.id}'
-    msg_admin = EmailMultiAlternatives(admin_subject, text_content, from_email, [to_admin])
-    msg_admin.attach_alternative(html_content, "text/html")
+    # 2. Send to Admin
+    admin_subject = f'New Order Received - {order.order_number}'
+    admin_html = render_to_string('emails/admin_notification.html', {
+        'order': order
+    })
+    admin_text = strip_tags(admin_html)
+    
+    msg_admin = EmailMultiAlternatives(admin_subject, admin_text, from_email, [to_admin])
+    msg_admin.attach_alternative(admin_html, "text/html")
     msg_admin.send()

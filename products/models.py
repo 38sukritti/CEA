@@ -30,6 +30,9 @@ class Order(models.Model):
         ('failed', 'Failed'),
     ]
 
+    # Professional Order ID (e.g., #CEA-X9K2-77)
+    order_number = models.CharField(max_length=20, unique=True, blank=True, null=True)
+
     # Customer Info
     first_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100, blank=True, null=True)
@@ -48,9 +51,30 @@ class Order(models.Model):
     currency = models.CharField(max_length=10, default='AED')
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending')
     stripe_session_id = models.CharField(max_length=255, unique=True)
+    # Tracking Info
+    SHIPPING_STATUS_CHOICES = [
+        ('processing', 'Processing'),
+        ('shipped', 'Shipped'),
+        ('delivered', 'Delivered'),
+        ('cancelled', 'Cancelled'),
+    ]
+    shipping_status = models.CharField(max_length=20, choices=SHIPPING_STATUS_CHOICES, default='processing')
+    tracking_number = models.CharField(max_length=100, blank=True, null=True)
+    tracking_url = models.URLField(blank=True, null=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def save(self, *args, **kwargs):
+        if not self.order_number:
+            import random
+            import string
+            chars = string.ascii_uppercase + string.digits
+            # Format: CEA-XXXX (e.g. CEA-K9L2)
+            code = ''.join(random.choices(chars, k=5))
+            self.order_number = f"CEA-{code}"
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return f'Order {self.id} - {self.first_name} {self.last_name} ({self.payment_status})'
+        return f'Order {self.order_number} - {self.first_name} {self.last_name} ({self.payment_status})'
 
